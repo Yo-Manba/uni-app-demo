@@ -36,7 +36,7 @@ export default {
                     size: 20
                 },
                 success: res => {
-                    console.log(res)
+                    console.log(res) 
                     this.listArr = res.data.result
                 },
                 fail: err => {
