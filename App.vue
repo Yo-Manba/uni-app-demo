@@ -8,7 +8,10 @@ export default {
 	},
 	onHide: function() {
 		console.log('App Hide');
-	}
+	},
+    globalData: {
+        comUrl: "https://qym.jjyapp.com"
+    }
 };
 </script>
 

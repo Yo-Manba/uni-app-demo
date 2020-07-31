@@ -1,1 +1,1 @@
-<view>二级页面</view>
+<view><block wx:for="{{listArr}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="item"><view>{{item.companyName}}</view><view>{{item.name}}</view><view>{{item.rent}}</view><view>{{item.serviceLife}}</view><view>{{item.townshipName}}</view></view></block></view>
