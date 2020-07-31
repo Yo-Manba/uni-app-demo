@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "uni-ui基础项目",
+  "usingComponents": {
+    "uni-card": "/components/uni-card/uni-card"
+  }
+}
