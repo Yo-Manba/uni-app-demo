@@ -180,13 +180,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
-      href: 'https://uniapp.dcloud.io/component/README?id=uniui' };
+      href: 'https://uniapp.dcloud.io/component/README?id=uniui',
+      videoIsPlay: false };
 
   },
+
   methods: {
     tapOpenMap: function tapOpenMap() {
       uni.openLocation({
@@ -205,7 +211,35 @@ var _default =
       uni.navigateTo({
         url: '/pages/twoPage/twoPage' });
 
-    } } };exports.default = _default;
+    },
+
+    videoPlayHandle: function videoPlayHandle() {
+      this.videoIsPlay = true;
+    },
+
+    videoEndedHandle: function videoEndedHandle() {
+      this.videoIsPlay = false;
+    } },
+
+
+  onReady: function onReady() {
+    console.log("onReady");
+    this.videoContext = uni.createVideoContext('myVideo');
+  },
+
+  onShow: function onShow() {
+    console.log('onShow');
+    if (this.videoIsPlay) {
+      this.videoContext.play();
+    }
+  },
+
+  onHide: function onHide() {
+    console.log('onHide');
+    if (this.videoIsPlay) {
+      this.videoContext.pause();
+    }
+  } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
