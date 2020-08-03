@@ -31,9 +31,9 @@
                 enable-play-gesture
                 show-mute-btn
                 title="龙门秘境宣传视频"
-                @play="videoPlayHandle"
-                @pause="videoPauseHandle"
-                @ended="videoEndedHandle"
+                @play="videoPlay"
+                @pause="videoPause"
+                @ended="videoEnded"
             ></video>
         </view>
 
@@ -71,17 +71,17 @@ export default {
             });
         },
 
-        videoPlayHandle() {
+        videoPlay() {
             this.videoIsPlay = true;
         },
 
-        videoPauseHandle() {
+        videoPause() {
             if (this.changeVideoStatus) {
                 this.videoIsPlay = false;
             }
         },
 
-        videoEndedHandle() {
+        videoEnded() {
             this.videoIsPlay = false;
         }
     },

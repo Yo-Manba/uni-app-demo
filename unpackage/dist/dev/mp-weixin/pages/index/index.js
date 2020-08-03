@@ -215,17 +215,17 @@ var _default =
 
     },
 
-    videoPlayHandle: function videoPlayHandle() {
+    videoPlay: function videoPlay() {
       this.videoIsPlay = true;
     },
 
-    videoPauseHandle: function videoPauseHandle() {
+    videoPause: function videoPause() {
       if (this.changeVideoStatus) {
         this.videoIsPlay = false;
       }
     },
 
-    videoEndedHandle: function videoEndedHandle() {
+    videoEnded: function videoEnded() {
       this.videoIsPlay = false;
     } },
 
