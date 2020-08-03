@@ -32,6 +32,7 @@
                 show-mute-btn
                 title="龙门秘境宣传视频"
                 @play="videoPlayHandle"
+                @pause="videoPauseHandle"
                 @ended="videoEndedHandle"
             ></video>
         </view>
@@ -45,7 +46,8 @@ export default {
     data() {
         return {
             href: 'https://uniapp.dcloud.io/component/README?id=uniui',
-            videoIsPlay: false
+            videoIsPlay: false,
+            changeVideoStatus: true
         };
     },
 
@@ -68,32 +70,40 @@ export default {
                 url: '/pages/twoPage/twoPage'
             });
         },
-        
+
         videoPlayHandle() {
-            this.videoIsPlay = true
+            this.videoIsPlay = true;
         },
-        
+
+        videoPauseHandle() {
+            if (this.changeVideoStatus) {
+                this.videoIsPlay = false;
+            }
+        },
+
         videoEndedHandle() {
-            this.videoIsPlay = false
+            this.videoIsPlay = false;
         }
     },
 
     onReady() {
-        console.log("onReady")
+        console.log('onReady');
         this.videoContext = uni.createVideoContext('myVideo');
     },
 
     onShow() {
         console.log('onShow');
-        if(this.videoIsPlay) {
-            this.videoContext.play()
+        this.changeVideoStatus = true;
+        if (this.videoIsPlay) {
+            this.videoContext.play();
         }
     },
 
     onHide() {
         console.log('onHide');
-        if(this.videoIsPlay) {
-            this.videoContext.pause()
+        this.changeVideoStatus = false;
+        if (this.videoIsPlay) {
+            this.videoContext.pause();
         }
     }
 };

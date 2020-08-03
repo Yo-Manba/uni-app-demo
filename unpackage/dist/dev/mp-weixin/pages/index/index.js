@@ -184,12 +184,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
     return {
       href: 'https://uniapp.dcloud.io/component/README?id=uniui',
-      videoIsPlay: false };
+      videoIsPlay: false,
+      changeVideoStatus: true };
 
   },
 
@@ -217,18 +219,25 @@ var _default =
       this.videoIsPlay = true;
     },
 
+    videoPauseHandle: function videoPauseHandle() {
+      if (this.changeVideoStatus) {
+        this.videoIsPlay = false;
+      }
+    },
+
     videoEndedHandle: function videoEndedHandle() {
       this.videoIsPlay = false;
     } },
 
 
   onReady: function onReady() {
-    console.log("onReady");
+    console.log('onReady');
     this.videoContext = uni.createVideoContext('myVideo');
   },
 
   onShow: function onShow() {
     console.log('onShow');
+    this.changeVideoStatus = true;
     if (this.videoIsPlay) {
       this.videoContext.play();
     }
@@ -236,6 +245,7 @@ var _default =
 
   onHide: function onHide() {
     console.log('onHide');
+    this.changeVideoStatus = false;
     if (this.videoIsPlay) {
       this.videoContext.pause();
     }

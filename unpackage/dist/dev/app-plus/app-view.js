@@ -324,6 +324,9 @@ var render = function() {
               play: function($event) {
                 return _vm.$handleViewEvent($event)
               },
+              pause: function($event) {
+                return _vm.$handleViewEvent($event)
+              },
               ended: function($event) {
                 return _vm.$handleViewEvent($event)
               }
