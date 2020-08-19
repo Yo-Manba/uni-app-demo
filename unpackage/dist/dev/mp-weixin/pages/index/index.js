@@ -101,10 +101,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uniLink: function() {
-    return __webpack_require__.e(/*! import() | components/uni-link/uni-link */ "components/uni-link/uni-link").then(__webpack_require__.bind(null, /*! @/components/uni-link/uni-link.vue */ 50))
+    return __webpack_require__.e(/*! import() | components/uni-link/uni-link */ "components/uni-link/uni-link").then(__webpack_require__.bind(null, /*! @/components/uni-link/uni-link.vue */ 39))
   },
   uniCard: function() {
-    return __webpack_require__.e(/*! import() | components/uni-card/uni-card */ "components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/components/uni-card/uni-card.vue */ 39))
+    return __webpack_require__.e(/*! import() | components/uni-card/uni-card */ "components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/components/uni-card/uni-card.vue */ 46))
   }
 }
 var render = function() {
@@ -185,6 +185,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -192,6 +198,7 @@ var _default =
       href: 'https://uniapp.dcloud.io/component/README?id=uniui',
       videoIsPlay: false,
       changeVideoStatus: true };
+
 
   },
 
@@ -227,6 +234,17 @@ var _default =
 
     videoEnded: function videoEnded() {
       this.videoIsPlay = false;
+    },
+
+    send: function send() {
+      console.log("发送");
+    },
+
+    changeFocus: function changeFocus() {
+      this.towFocus = false;
+      this.oneFocus = true;
+      console.log(this.oneFocus);
+      console.log(this.towFocus);
     } },
 
 

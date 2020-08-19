@@ -335,7 +335,29 @@ var render = function() {
         ],
         1
       ),
-      _c("v-uni-view", { staticStyle: { height: "50rpx" }, attrs: { _i: 16 } })
+      _c(
+        "v-uni-text",
+        {
+          staticStyle: { "background-color": "#007AFF", padding: "30rpx" },
+          attrs: { for: "msg", _i: 16 },
+          on: {
+            touchend: function($event) {
+              return _vm.$handleViewEvent($event, { prevent: true })
+            }
+          }
+        },
+        [_vm._v("发送")]
+      ),
+      _c("v-uni-input", {
+        staticStyle: { "background-color": "#007AFF" },
+        attrs: {
+          type: "text",
+          value: "",
+          focus: _vm._$g(17, "a-focus"),
+          _i: 17
+        }
+      }),
+      _c("v-uni-view", { staticStyle: { height: "50rpx" }, attrs: { _i: 18 } })
     ],
     1
   )

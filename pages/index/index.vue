@@ -19,7 +19,9 @@
         <uni-card title="标题文字" thumbnail="" extra="额外信息" note="Tips">内容主体，可自定义内容及样式</uni-card>
 
         <view class="navBtn" @click="toTwoPage">进入二级页面</view>
-
+        
+        <!-- <input type="text" value="" :focus="towFocus" style="1px solid #f5f5f5; background-color: #2C405A; margin-top: 20rpx;" @click="changeFocus" /> -->
+        
         <!-- 宣传视频 -->
         <view class="itemBox">
             <view class="head"><view class="tit">宣传视频</view></view>
@@ -36,6 +38,10 @@
                 @ended="videoEnded"
             ></video>
         </view>
+        
+        <text for="msg" style="background-color: #007AFF; padding: 30rpx;" @touchend.prevent="send">发送</text>
+        <input type="text" value="" :focus="oneFocus" style="1px solid #f5f5f5; background-color: #007AFF;" />
+        
 
         <view style="height: 50rpx;"></view>
     </view>
@@ -48,6 +54,7 @@ export default {
             href: 'https://uniapp.dcloud.io/component/README?id=uniui',
             videoIsPlay: false,
             changeVideoStatus: true
+            
         };
     },
 
@@ -83,6 +90,17 @@ export default {
 
         videoEnded() {
             this.videoIsPlay = false;
+        },
+        
+        send() {
+            console.log("发送");
+        },
+        
+        changeFocus() {
+            this.towFocus = false;
+            this.oneFocus = true;
+            console.log(this.oneFocus)
+            console.log(this.towFocus)
         }
     },
 
