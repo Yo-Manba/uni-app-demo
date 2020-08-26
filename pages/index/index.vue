@@ -5,24 +5,17 @@
         </view>
         <text class="intro navBtn">详见：</text>
         <view class="navBtn" style="overflow-x: hidden;"><uni-link :href="href" :text="href"></uni-link></view>
-
         <button style="width: 90%; margin-top: 40rpx;" type="primary" @click="tapOpenMap">点击</button>
-
         <button style="width: 90%; margin-top: 40rpx;" type="default">按钮</button>
-
         <uni-card title="标题文字" thumbnail="" extra="额外信息" note="Tips">内容主体，可自定义内容及样式</uni-card>
-
         <uni-card title="标题文字" thumbnail="" extra="额外信息" note="Tips">内容主体，可自定义内容及样式</uni-card>
-
         <uni-card title="标题文字" thumbnail="" extra="额外信息" note="Tips">内容主体，可自定义内容及样式</uni-card>
-
         <uni-card title="标题文字" thumbnail="" extra="额外信息" note="Tips">内容主体，可自定义内容及样式</uni-card>
-
         <view class="navBtn" @click="toTwoPage">进入二级页面</view>
         
         <!-- <input type="text" value="" :focus="towFocus" style="1px solid #f5f5f5; background-color: #2C405A; margin-top: 20rpx;" @click="changeFocus" /> -->
         
-        <!-- 宣传视频 -->
+        <!-- 宣传视频 -->sss
         <view class="itemBox">
             <view class="head"><view class="tit">宣传视频</view></view>
             <video
